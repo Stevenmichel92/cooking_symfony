@@ -1,0 +1,204 @@
+*{
+    outline:0;
+}
+h1, h2, h3, h4{
+    text-align: center;
+
+}
+header{
+    background-image : url(../../bundles/app/images/blur.jpg);
+    padding-top:20px;
+    padding-bottom:2px;
+    box-shadow : 1px 1px 12px rgb(150, 149, 149);
+    background-color: lightgrey;
+}
+
+.nav{
+    box-shadow : 1px 1px 12px rgb(150, 149, 149);
+}
+
+.recettes_body{
+    background-color: rgb(235, 240, 243);
+    padding:0% 0% 6% 0%; margin-top:1%;  
+    box-shadow : 1px 1px 12px rgb(150, 149, 149);
+    border-radius:50px;
+}
+
+.slide_format{
+    box-shadow : 2px 2px 12px rgb(150, 149, 149);
+}
+
+#body{
+    background-color:rgba(212, 196, 201, 0.514);
+}
+
+#logo{
+    margin-bottom: 1%;
+}
+
+.connexion{
+    background-color: rgb(177, 17, 129);
+    border-radius: 50px;
+    margin-bottom:2%;
+    border-color:white;
+}
+.connexion:hover{
+    background-color: rgb(179, 88, 144);
+    }
+#deconnexion{
+    background-color: rgb(128, 53, 104);
+    border-radius: 50px;
+    margin-bottom:2%;
+    border-color:white;
+
+}
+#depot_recette{
+    background-color: rgb(241, 150, 150);
+}
+
+#img_big{
+    background-image: url();
+    background-repeat: no-repeat; 
+    background-position: center; 
+    width:100%;
+    min-height: 300px;
+    background-size: 100%;
+
+}
+
+#img_big2{
+    background-image: url(../../bundles/app/css/slides/carottes-glacees-orange.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: 100%; 
+    min-height: 300px;
+    
+}
+#img_big3{
+    background-image: url(../../bundles/app/css/slides/pomme-de-terre-aux-herbes.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: 100%; 
+    min-height: 300px;
+}
+.title_body_top_index{
+    text-align: center;
+    padding-top : 5%;
+    filter:none;
+}
+#search_body{
+    border-radius: 30px;
+    width: 350px;
+    padding-left: 2%;
+    float:left;
+}
+
+.title_body_middle_index{
+    text-align: center;
+    padding-top:2%;
+}
+.title_body_connexion{
+    text-align: center;
+    font-weight: bold;
+}
+
+footer{
+    background-color: grey;
+    text-align:center;
+    height: 80px;
+    bottom:0;
+    width: 100%;
+    padding-top:2%;
+}
+
+.recette_index{
+    border:solid 1px;
+    margin-top: 2%;
+    width:100%;
+    padding:1% 1% 1% 1%;
+}
+.recette_index_body{
+    height : 220px;
+}
+.recette_index_select{
+    border:solid 1px;
+    margin-top: 2%;
+    width:100%;
+    padding:1% 1% 1% 1%;
+    background-color: bisque;
+}
+.fushia{
+    background-color: rgb(245, 169, 169);
+}
+.bleuClair{
+    background-color: rgb(202, 229, 238);
+}
+.vertClair{
+    background-color: rgb(184, 241, 184);
+}
+.position_Color{
+    height:20px;
+    width:40px;
+    float:right; 
+    margin-right:30%;
+    border :solid 1px;
+}
+#depot_recette_body{
+    text-align:center; background-color:rgb(243, 218, 149);
+    padding-top: 1%;
+}
+.depot_recette_body_title{
+    font-weight: 500;
+}
+
+
+.card:hover{
+    background-color: rgb(163, 161, 138);;
+}
+
+#indexfond{
+    background-image: url(../../bundles/app/css/slides/pomme-de-terre-aux-herbes.jpg); border-top-left-radius:50px; border-top-right-radius:50px;
+}
+
+.display{
+    display : none;
+}
+
+.recette_index_forme{
+    padding:0% 2% 0% 2%;
+}
+
+.img_compte{
+    border-radius : 50%;
+    border : 1px solid rgb(128, 120, 120);
+}
+
+.compte_body{
+    background-image : url(../../bundles/app/img/pictures/header/blur.jpg);
+    color : white;
+    padding-top:1%;
+    padding-bottom: 1%;
+}
+
+.recette_index_new{
+    margin-top:2%;
+}
+
+
+.couleur_card{
+    background-color: rgb(142, 162, 180);
+    
+}
+
+.couleur_card_titre{
+    color:rgb(224, 224, 224);
+}
+
+.border_radius{
+    border-radius:50px;
+}
+
+.social{
+    margin-top:2%;
+    margin-bottom:3%;
+}

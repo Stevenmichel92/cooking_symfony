@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide slide_format" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                {% image '@AppBundle/Resources/public/images/1.jpg' %}
+                    <img src="{{ asset_url }}" class="d-block w-100" alt="1" />
+                {% endimage %}
+            </div>
+            <div class="carousel-item">
+                {% image '@AppBundle/Resources/public/images/2.jpg' %}
+                    <img src="{{ asset_url }}" class="d-block w-100" alt="1" />
+                {% endimage %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container recettes_body">
+        <div class="recettes_body_title"> 
+            <div class="row">
+                <div class="col-12">
+                    <div id="recette">
+                        <h2 class="title_body_middle_index">NOS DERNIERES RECETTES</h2>
+                    </div>
+                </div>
+            </div>    
+        </div>  
+        <hr>
+        <div class="row recette_index_forme" >  
+            {% for recette in recettes %}
+                <div class="col-sm-6 col-md-6 col-lg-4" style="margin-top:2%">
+                    {% include '@CookingRecettes/Default/recettes_card.html.twig' %}
+                </div>
+            {% endfor %}
+        </div>  
+
+        <br><br>  
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h3 class="title_body_connexion">Vous voulez partager votre recette, connectez-vous!</h3> 
+            </div>
+            <div class="col-12">
+                <div class="row justify-content-center">
+                    <a href="connexion " class="btn btn-primary">Connexion</a>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <br>               
+
+{% endblock %}

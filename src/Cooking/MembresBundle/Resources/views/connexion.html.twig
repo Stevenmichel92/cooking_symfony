@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Connexion</li>
+        </ol>
+    </nav>   
+    
+    <div class="container recettes_body" style="padding-left:1%;">
+        <div class="row">
+            <div class ="col-sm-12 col-md-6 col-lg-6">
+                <br>
+                <h3>Je me connecte</h3>
+
+                    {{ form_start(form_connexion) }}
+                    <div class="form-group">
+                        Login
+                        {{ form_widget(form_connexion.login, { 'attr': {'class': 'form-control', 'size': '30'} }) }}
+                    </div>
+
+                    <div class="form-group">    
+                        Mot de passe
+                        {{ form_widget(form_connexion.password, { 'attr': {'class': 'form-control', 'size': '30'} }) }}
+                    </div>
+
+                    <div class="row justify-content-center">
+                            {{ form_widget(form_connexion.save, { 'attr': {'class': 'btn btn-info'} }) }}
+                    </div>
+            </div>   
+                {{ form_end(form_connexion) }}
+
+                
+
+            <div class ="col-sm-12 col-md-6 col-lg-6">
+                <br>
+                <h3>Vous voulez vous inscrire?</h3>
+                <br>
+                <h5 style="text-align:center">Je m'inscris en cliquant <a href="inscription">ici</a></h5><br><br>
+            </div>
+        </div>   
+    </div>  
+
+{% endblock %}    

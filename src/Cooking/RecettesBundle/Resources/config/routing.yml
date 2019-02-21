@@ -1,0 +1,3 @@
+cooking_recettes_homepage:
+    path:     /
+    defaults: { _controller: CookingRecettesBundle:Default:index }

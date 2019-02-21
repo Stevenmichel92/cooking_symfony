@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index">Home</a></li>
+            <li class="breadcrumb-item"><a href="../compte">Mon compte</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Modification mot de passe</li>
+        </ol>
+    </nav>
+
+    <h2> Mon compte </h2>
+
+    <div class="container recettes_body">
+        <div class="row justify-content-center"> 
+            <div class="form-group">
+                <form method="post">
+                    <br><label for="mdp">Mon nouveau mot de passe</label><br>
+                     {{ form_start(form_mdp) }}
+                         {{ form_widget(form_mdp.password, { 'attr': {'class': 'form-control', 'size': '30'} }) }}
+                     
+                        <div class="row justify-content-center"> 
+                            {{ form_widget(form_mdp.save, { 'attr': {'class': 'btn btn-info', 'size': '30'} }) }}
+                        </div>
+                    {{ form_end(form_mdp) }}
+                
+                </form>    
+            </div>
+        </div>
+    </div>  
+
+
+{% endblock %} 

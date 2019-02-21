@@ -1,0 +1,26 @@
+cooking_membres:
+    resource: "@CookingMembresBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+cooking_recettes:
+    resource: "@CookingRecettesBundle/Controller/"
+    type: annotation
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /easyadmin
+
+admin_area:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admina
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admina

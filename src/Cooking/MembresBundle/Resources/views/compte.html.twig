@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Mon compte</li>
+            </ol>
+        </nav>  
+
+        <div id="myTable" >
+            <div class="container recettes_body">
+                <br>
+                <h2> Mon compte </h2><br>
+                <div class="row justify-content-center compte_body" style="color:black">
+                    <div class="col-12" >
+                        <h2 >{{ app.session.get('login') }}<br></h2>
+                        <div class="row justify-content-center">
+                        
+                            {% set img_gravatar = app.session.get('gravatar') %}
+                            <img src="{{ asset('bundles/app/images/gravatars/' ~ img_gravatar) }}" width="200" height="200" alt="{{ app.session.get('gravatar') }}" class="img_compte"> 
+                            
+                        </div>    
+                    </div>
+                    <br><br>
+                    <div class="col-12">
+                        <div class="row justify-content-center">
+                            <div class="col-12 ">
+                                <div class="row justify-content-center">
+                                    <h4>{{ app.session.get('prenom') }}</h4><br>
+                                </div>
+                            </div>
+
+                            <div class="col-12 ">
+                                <div class="row justify-content-center">    
+                                    <h4>{{ app.session.get('nom') }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>    
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="row justify-content-center">
+                                   <a href="compte/mdp"><button type="submit" class="btn btn-info">Modifier mon mot de passe</button></a>
+
+                            </div>
+                        </div><br><br>     
+                        <div class="col-sm-12 col-md-4">
+                            <div class="row justify-content-center">
+                                <a href="compte/gravatar"><button type="submit" class="btn btn-info">Modifier mon avatar<br></button></a>
+                            </div>
+                        </div><br><br> 
+
+                        <div class="col-sm-12 col-md-4">
+                            <div class="row justify-content-center">
+                                <form action="file.csv">
+                                    <button type="submit" class="btn btn-secondary">Télécharger vos données<br></button>
+                                </form>
+                            </div>
+                        </div><br><br><br>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <br><br><button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal{{ app.session.get('login') }}">Supprimer mon compte</button>
+                        
+                    <div class="modal" id="exampleModal{{ app.session.get('login') }}" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Confirmation suppression compte</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Etes-vous sure de vouloir supprimer votre compte?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                     {{ form_start(form_supp) }}
+                                        {{ form_widget(form_supp.save, { 'attr': {'class': 'btn btn-primary', 'size': '30'} }) }}
+                                     {{ form_end(form_supp) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h4> Mes recettes </h4>  
+                <div class="row" style ="padding-left:2%">
+
+                    {% if recettes != null %}
+                      
+                            {% for recette in recettes %}
+                                <div class="col-sm-6 col-md-6 col-lg-4" style="margin-top:2%">
+                                    {% include '@CookingRecettes/Default/recettes_card.html.twig' %}
+                                    <hr>
+                                </div>
+                            {% endfor %}                   
+                    {% else %}
+                        <div class="col-12">
+                            <span>Aucune recette déposée</span>
+                        </div>
+                    {% endif %}
+
+                 </div>  
+            </div>
+        </div>
+
+{% endblock %}  

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Recettes</li>
+        </ol>
+    </nav>    
+
+    <div class="container recettes_body">
+        <h2 class="title_body_middle_index"> Nos recettes</h2>
+        <hr>
+        <div class="row recette_index_forme">
+           
+                {% for recette in recettes %}
+                    <div class="col-sm-6 col-md-6 col-lg-4" style="margin-top:2%">
+                        {% include '@CookingRecettes/Default/recettes_card.html.twig' %}
+                    </div>
+                {% endfor %}
+                       
+        </div>
+    </div> 
+     
+
+{% endblock %}

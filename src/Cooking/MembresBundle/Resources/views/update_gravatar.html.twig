@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index">Home</a></li>
+            <li class="breadcrumb-item"><a href="../compte">Mon compte</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Modification avatar</li>
+        </ol>
+    </nav>  
+
+    <h2> Mon compte </h2>
+
+    <div class="container recettes_body">
+        <div class="row justify-content-center"> 
+    
+           {{ form_start(update) }}
+                <div class="form-group" style="padding:5%">
+                </div>
+                <div class="row justify-content-center">
+                    {{ form_widget(update.save, { 'attr': {'class': 'btn btn-info'} }) }}
+                </div>
+           {{ form_end(update) }}
+            </form>    
+        </div>
+    </div>  
+
+{% endblock %} 

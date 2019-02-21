@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+              
+    <div class="container" id="depot_recette_body">
+        <div class="row">
+            <div class="col-12" >  
+                {{ form_start(depot) }}
+                 
+                    {{ form_row(depot.titre) }} 
+                    {{ form_row(depot.chapo) }} 
+                    {{ form_row(depot.preparation) }} 
+                    {{ form_row(depot.ingredient) }} 
+                    {{ form_row(depot.couleur) }} 
+                    {{ form_row(depot.categorie) }} 
+                    {{ form_row(depot.tempsCuisson) }} 
+                    {{ form_row(depot.tempsPreparation) }} 
+                    {{ form_row(depot.difficulte) }} 
+                    {{ form_row(depot.prix) }} 
+                    {{ form_widget(depot.save, { 'attr': {'class': 'btn btn-primary'} }) }}
+                {{ form_end(depot) }}
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}
